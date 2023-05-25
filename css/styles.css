@@ -92,6 +92,8 @@ p {
 .filter-btn:hover {
   color: var(--active2);
   background-color: var(--active1);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .activity-card {
   background-color: var(--background-medium);
@@ -158,6 +160,10 @@ p {
 }
 .portfolio-card figcaption {
   padding: 20px 24px;
+}
+.portfolio-card:hover {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .portfolio .caption {
   font-size: 18px;
@@ -246,7 +252,7 @@ main > .container {
 .menu {
   display: flex;
   margin-left: 46.5px;
-  margin-right: 185.5px;
+  margin-right: 165.5px;
   gap: 46px;
 }
 .contact {
@@ -254,6 +260,15 @@ main > .container {
   margin-left: 185.5px;
   margin-right: 6px;
   gap: 50px;
+}
+.mail,
+.phone {
+  display: flex;
+  align-items: center;
+}
+.mail svg,
+.phone svg {
+  margin-right: 10px;
 }
 .section {
   display: flex;
@@ -317,11 +332,17 @@ main > .container {
   fill: var(--contact-header);
 }
 .mail:hover .contact-icons,
-.phone:hover .contact-icons {
+.phone:hover .contact-icons,
+.mail:focus .contact-icons, /*focus nie działa w tym przypadku ??? */
+.phone:focus .contact-icons {
+  /*focus nie działa w tym przypadku ??? */
   fill: var(--active1);
 }
 .mail:hover .contact-link-header,
-.phone:hover .contact-link-header {
+.phone:hover .contact-link-header,
+.mail:focus .contact-link-header, /*focus nie działa w tym przypadku ??? */
+.phone:focus .contact-link-header {
+  /*focus nie działa w tym przypadku ??? */
   color: var(--active1);
 }
 .socials-icons {
